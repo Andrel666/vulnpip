@@ -20,7 +20,7 @@ jobs: # a collection of steps
           command: snyk auth $SNYK_TOKEN
       - run: # run snyk auth - authenticate snyk use environment variables to add token
           name: pip install
-          command: pip install
+          command: pip install -r requirements.txt
       - run: # run snyk test - run snyk test
           name: snyk test
           command: snyk test
