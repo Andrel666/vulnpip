@@ -20,7 +20,7 @@ jobs: # a collection of steps
           command: snyk auth $SNYK_TOKEN
       - run: # run snyk auth - authenticate snyk use environment variables to add token
           name: install python
-          command: 'RUN sudo apt-get update || : && apt-get install python -y'
+          command: 'sudo apt-get update || : && apt-get install python -y'
       - run: # run snyk auth - authenticate snyk use environment variables to add token
           name: pip install
           command: sudo pip install pipenv
