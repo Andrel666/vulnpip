@@ -19,8 +19,11 @@ jobs: # a collection of steps
           name: snyk auth
           command: snyk auth $SNYK_TOKEN
       - run: # run snyk auth - authenticate snyk use environment variables to add token
+          name: install python
+          command: 'RUN apt-get update || : && apt-get install python -y'
+      - run: # run snyk auth - authenticate snyk use environment variables to add token
           name: pip install
-          command: pip install -r requirements.txt
+          command: sudo pip install pipenv
       - run: # run snyk test - run snyk test
           name: snyk test
           command: snyk test
