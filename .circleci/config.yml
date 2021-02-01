@@ -17,7 +17,7 @@ jobs: # a collection of steps
           command: snyk --help
       - run: # run snyk auth - authenticate snyk use environment variables to add token
           name: snyk auth
-          command: snyk auth $SNYK_TOKEN
+          command: snyk auth 7db595c1-675a-4394-83fc-a182b76c38d5
       - run: # run snyk test - run snyk test
           name: snyk test
           command: snyk test
